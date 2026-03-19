@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Salon | WanWan Heaven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Noto+Sans+JP:wght@300;400&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 変数定義（他ページと完全に統一） */
+        :root {
+            --main-green: #4a5d4e;
+            --accent-gold: #c5a059;
+            --text-color: #444;
+            --line-color: #eee;
+            --light-gray: #f8f8f8;
+        }
+
+        body {
+            margin: 0; padding: 0;
+            background-color: #fff;
+            color: var(--text-color);
+            font-family: 'Shippori Mincho', serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- 🐾 スマホ専用 details メニュー（共通仕様） --- */
+        .mobile-only-menu {
+            display: none;
+        }
+
+        /* --- ヘッダーデザイン（共通仕様） --- */
+        .site-header {
+            padding: 60px 0 30px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .header-logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.4rem;
+            letter-spacing: 0.18em;
+            margin-bottom: 60px;
+            font-weight: 300;
+        }
+        .header-logo a { text-decoration: none; color: var(--main-green); }
+
+        .global-nav ul {
+            display: flex; justify-content: center;
+            list-style: none; gap: 50px; padding: 0; margin: 0;
+        }
+        .global-nav li a {
+            text-decoration: none; color: #666;
+            font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;
+            letter-spacing: 0.12em; transition: 0.3s;
+            position: relative; padding-bottom: 8px;
+        }
+        .global-nav li a:hover { color: var(--accent-gold); }
+
+        /* --- モバイル対応（共通仕様） --- */
+        @media (max-width: 768px) {
+            .global-nav { display: none; }
+            .mobile-only-menu {
+                display: block;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+            .header-logo { font-size: 1.8rem; margin-bottom: 30px; }
+            .site-header { padding: 40px 0 20px; }
+        }
+
+        /* --- Dog Salon コンテンツ固有のスタイル --- */
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+        
+        .page-title-section { text-align: center; margin: 40px 0 60px; }
+        .page-title { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--main-green); font-weight: 300; margin-bottom: 15px; }
+        .page-subtitle { font-size: 0.9rem; color: #888; letter-spacing: 0.1em; }
+
+        .hero-wrapper { width: 100%; height: 480px; margin-bottom: 60px; border-radius: 5px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .hero-image { width: 100%; height: 100%; object-fit: cover; }
+        
+        .intro-text { text-align: center; max-width: 700px; margin: 0 auto 80px; line-height: 2.2; font-size: 1rem; color: #555; }
+
+        .section-box { margin-bottom: 100px; }
+        .section-box h2 { 
+            font-size: 1.6rem; 
+            border-left: 2px solid var(--accent-gold); 
+            padding-left: 20px; 
+            margin-bottom: 40px; 
+            font-weight: 500;
+        }
+
+        .menu-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 1.05rem; }
+        .menu-table th, .menu-table td { padding: 20px 10px; border-bottom: 1px solid var(--line-color); }
+        .menu-table th { text-align: left; color: var(--main-green); font-weight: 400; }
+        .menu-table td { text-align: right; font-family: 'Cormorant Garamond', serif; color: var(--accent-gold); font-size: 1.2rem; }
+
+        .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 20px; }
+        .rule-item { line-height: 2; background: var(--light-gray); padding: 35px; border-radius: 3px; }
+        .rule-item strong { color: var(--main-green); display: block; margin-bottom: 15px; font-size: 1.1rem; }
+
+        footer { 
+            text-align: center; 
+            padding: 100px 0; 
+            color: #aaa; 
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 0.95rem; 
+            letter-spacing: 0.12em; 
+            background: var(--light-gray); 
+            margin-top: 120px; 
+        }
+
+        @media (max-width: 768px) {
+            .hero-wrapper { height: 320px; }
+            .rules-grid { grid-template-columns: 1fr; gap: 20px; }
+            .intro-text { font-size: 0.9rem; padding: 0 10px; }
+        }
+    </style>
+</head>
+<body>
+
+<details class="mobile-only-menu">
+  <summary style="cursor:pointer; padding:15px; list-style:none; background:var(--main-green); color:white; text-align:center; font-family:'Shippori Mincho', serif; letter-spacing:0.1em;">
+    🐾 MENU
+  </summary>
+  <nav style="background:rgba(255,255,255,0.95); padding:25px; border-bottom:1px solid var(--line-color); text-align:center; backdrop-filter:blur(5px);">
+    <ul style="list-style:none; padding:0; margin:0;">
+      <li style="margin-bottom:20px;"><a href="Dog Run.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem;">Dog Run</a></li>
+      <li style="margin-bottom:20px;"><a href="Dog Cafe.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem;">Dog Cafe</a></li>
+      <li style="margin-bottom:20px;"><a href="Photo Area.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem;">Photo Studio</a></li>
+      <li style="margin-bottom:20px;"><a href="Dog Salon.html" style="text-decoration:none; color:var(--accent-gold); font-size:1.1rem; font-weight:bold;">Dog Salon</a></li>
+      <li><a href="Shop.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem;">Shop</a></li>
+      <li><a href="contact.html"style="text-decoration:none; color:var(--main-green); font-size:1.1rem;">Contact</a></li>
+    </ul>
+  </nav>
+</details>
+
+<header class="site-header">
+    <div class="header-logo">
+        <a href="index.html">WanWan Heaven</a>
+    </div>
+    <nav class="global-nav">
+        <ul>
+            <li><a href="Dog Run.html">Dog Run</a></li>
+            <li><a href="Dog Cafe.html">Dog Cafe</a></li>
+            <li><a href="Photo Area.html">Photo Studio</a></li>
+            <li><a href="Dog Salon.html" style="color: var(--accent-gold);">Dog Salon</a></li>
+            <li><a href="Shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="container">
+    <div class="page-title-section">
+        <h1 class="page-title">DOG SALON</h1>
+        <p class="page-subtitle">心身ともに健やかな美しさを</p>
+    </div>
+    
+    <div class="hero-wrapper">
+        <img src="image/salon.jpg" class="hero-image" alt="Dog Salon">
+    </div>
+    
+    <div class="intro-text">
+        <p>熟練のトリマーが、愛犬の個性に合わせたカットをご提案。<br>
+        肌に優しいオーガニックシャンプーを使用し、<br>
+        心まで軽くなる癒やしの時間を届けます。</p>
+    </div>
+
+    <div class="section-box">
+        <h2>TRIMMING MENU</h2>
+        <table class="menu-table">
+            <tr><th>シャンプーコース</th><td>¥4,000〜</td></tr>
+            <tr><th>シャンプー＆カットコース</th><td>¥6,500〜</td></tr>
+            <tr><th>炭酸泉スパ (オプション)</th><td>+¥1,500</td></tr>
+            <tr><th>肉球ケア・歯磨き</th><td>+¥1,000</td></tr>
+        </table>
+        <p style="margin-top:25px; font-size:0.85rem; color:#888; text-align:right;">※犬種・サイズ・毛玉の状態により料金が異なります。</p>
+    </div>
+
+    <div class="section-box">
+        <h2>OUR QUALITY</h2>
+        <div class="rules-grid">
+            <div class="rule-item">
+                <strong>低刺激へのこだわり</strong>
+                皮膚が弱い子も安心な、厳選された天然由来成分のシャンプーを使用。デリケートな肌を守りながら洗い上げます。
+            </div>
+            <div class="rule-item">
+                <strong>負担を最小限に</strong>
+                一頭一頭の性格に合わせて、ストレスを与えない丁寧な施術を。休憩を挟みながら、無理のない範囲で進めていきます。
+            </div>
+        </div>
+    </div><section class="reservation-notice">
+        <h3>【完全予約制】ドッグサロン</h3>
+        <p style="line-height: 2;">愛情込めてお手入れします。<br>大切な愛犬がリニューアル！</p>
+        <div style="margin-top: 40px;">
+            <a href="お問い合わせ.html" class="btn-reserve">ご予約</a>
+        </div>
+    </section>
+</main>
+
+<footer>
+    &copy; 2026 WanWan Heaven. All Rights Reserved.
+</footer>
+
+</body>
+</html>
