@@ -68,42 +68,8 @@
 
         /* --- Resort Map Section --- */
         .map-wrap { padding: 100px 0 150px; background: #f8f8f6; overflow: hidden; }
-        .map-container { 
-            position: relative; 
-            max-width: 900px; 
-            aspect-ratio: 1 / 1; 
-            margin: 0 auto; 
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="38" fill="none" stroke="%236b7e5f" stroke-width="0.1" stroke-dasharray="2,2"/></svg>') center/contain no-repeat;
-        }
-
-        .map-item { position: absolute; width: 140px; text-align: center; text-decoration: none; color: var(--text-dark); transition: 0.4s; z-index: 5; }
-        .map-item:hover { transform: scale(1.05); }
-        
-        .map-icon { 
-            width: 120px; height: 120px; 
-            margin: 0 auto 10px; background: #fff; 
-            border-radius: 50%; border: 1px solid var(--line-color); 
-            display: flex; align-items: center; justify-content: center; 
-            overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.06); 
-            transition: 0.3s; 
-        }
-        .map-item:hover .map-icon { border-color: var(--accent-gold); box-shadow: 0 15px 30px rgba(194, 161, 122, 0.2); }
-        .map-icon img { width: 100%; height: 100%; object-fit: cover; }
-        .map-item p { font-size: 0.95rem; font-weight: 700; color: var(--main-green); margin-top: 5px; line-height: 1.2; }
-        .map-item span { font-size: 0.75rem; color: var(--accent-gold); display: block; font-weight: 500; }
-
-        /* PC Positions */
-        .map-center { top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; }
-        .map-center .map-icon { border: 3px solid var(--accent-gold); } 
-        .pos-salon { top: 5%; left: 15%; } 
-        .pos-cafe { top: 5%; right: 15%; }
-        .pos-shop { top: 50%; right: 0%; transform: translateY(-50%); }
-        .pos-studio { top: 50%; left: 0%; transform: translateY(-50%); }
-        .pos-parking { bottom: 8%; left: 10%; }
-        .pos-contact { bottom: 8%; right: 10%; }
-        .pos-entrance { bottom: -2%; left: 50%; transform: translateX(-50%); }
-
-        .pos-parking .map-icon, .pos-contact .map-icon { width: 90px; height: 90px; }
+        .map-img-container { max-width: 1000px; margin: 0 auto; padding: 0 20px; text-align: center; }
+        .map-img-container img { width: 100%; height: auto; display: block; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.08)); }
 
         /* --- Access Section --- */
         .access-wrap { padding: 100px 0; background: #fff; border-top: 1px solid var(--line-color); }
@@ -119,45 +85,17 @@
         .page-top-btn svg { fill: var(--accent-gold); width: 32px; height: 32px; transition: 0.3s; }
         .page-top-btn:hover svg { fill: #fff; }
 
-        /* --- Responsive Design (Smartphone Optimized) --- */
+        /* --- Responsive Design --- */
         @media (max-width: 900px) {
             header { display: none; }
             .mobile-only-menu { display: block; position: sticky; top: 0; z-index: 3000; }
-            
             .hero { min-height: 60vh; padding-top: 20px; }
             .hero-content { flex-direction: column-reverse; }
             .hero-img-wrap { width: 100%; height: 35vh; border-radius: 0 0 0 60px; margin-bottom: 15px; }
             .hero-title { font-size: 1.5rem; text-align: center; }
-
             .facility-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 0 10px; }
-            
-            /* マップのレスポンシブ調整 */
-            .map-container { 
-                width: 92vw; 
-                height: 92vw; 
-                margin: 40px auto; 
-                background-size: 85%;
-            }
-            .map-item { width: 22vw; } 
-            .map-icon { width: 16vw; height: 16vw; margin-bottom: 4px; }
-            .map-center .map-icon { width: 20vw; height: 20vw; }
-            .map-item p { font-size: 0.7rem; }
-            .map-item span { font-size: 0.55rem; }
-            
-            /* スマホ用アイコン配置 */
-            .pos-salon { top: 5%; left: 8%; }
-            .pos-cafe { top: 5%; right: 8%; }
-            .pos-shop { top: 48%; right: -2%; transform: translateY(-50%); }
-            .pos-studio { top: 48%; left: -2%; transform: translateY(-50%); }
-            .pos-parking { bottom: 12%; left: 8%; }
-            .pos-contact { bottom: 12%; right: 8%; }
-            .pos-entrance { bottom: -2%; left: 50%; transform: translateX(-50%); }
-
-            .pos-parking .map-icon, .pos-contact .map-icon { width: 14vw; height: 14vw; }
-
             .access-flex { flex-direction: column !important; }
             .access-map-box, .access-info-box { width: 100% !important; min-width: auto !important; }
-            
             .reserve-btn { width: 80px; height: 80px; bottom: 20px; right: 20px; font-size: 0.8rem; }
             .page-top-btn { bottom: 20px; left: 20px; width: 50px; height: 50px; }
         }
@@ -220,42 +158,8 @@
             <h2 style="font-size:1.2rem; color:var(--accent-gold); margin-bottom:10px; font-weight:700;">- Resort Map -</h2>
             <h2 style="font-size:1.6rem;">森に広がる<br>わんわんパラダイス 施設案内</h2>
         </div>
-        
-        <div class="map-container fade-in">
-            <a href="Dog Run.html" class="map-item map-center">
-                <div class="map-icon"><img src="image/ran.png" alt="Dog Run"></div>
-                <p>Dog Run</p><span>Grand Park</span>
-            </a>
-            <a href="Dog Salon.html" class="map-item pos-salon">
-                <div class="map-icon"><img src="image/salon.jpg" alt="Salon"></div>
-                <p>Salon</p><span>Dog Salon</span>
-            </a>
-            <a href="Dog Cafe.html" class="map-item pos-cafe">
-                <div class="map-icon"><img src="image/cafe.png" alt="Cafe"></div>
-                <p>Cafe</p><span>Dog Cafe</span>
-            </a>
-            <a href="Shop.html" class="map-item pos-shop">
-                <div class="map-icon"><img src="image/shopping.png" alt="Shop"></div>
-                <p>Shop</p><span>Select Goods</span>
-            </a>
-            <a href="Photo Area.html" class="map-item pos-studio">
-                <div class="map-icon"><img src="image/photo2.png" alt="Studio"></div>
-                <p>Studio</p><span>Photo Area</span>
-            </a>
-            <a href="contact.html" class="map-item pos-contact">
-                <div class="map-icon"><img src="image/contact.png" alt="Contact"></div>
-                <p>Contact</p><span>Information</span>
-            </a>
-            <a href="#" class="map-item pos-parking">
-                <div class="map-icon"><img src="image/parking.png" alt="Parking"></div>
-                <p>Parking</p><span>Free Space</span>
-            </a>
-            <a href="index.html" class="map-item pos-entrance">
-                <div class="map-icon" style="background: var(--main-green); border: none;">
-                    <img src="image/gert.png" alt="Entrance" style="filter: brightness(1.5);">
-                </div>
-                <p style="color:var(--accent-gold); font-weight:700;">Entrance</p><span>Welcome Gate</span>
-            </a>
+        <div class="map-img-container fade-in">
+            <img src="image/map.png" alt="リゾートマップ">
         </div>
     </section>
 
@@ -267,7 +171,7 @@
         <div style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
             <div class="access-flex">
                 <div class="access-map-box">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.445214815467!2d135.5103444761803!3d34.46618589578635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000d0bc650e82c1%3A0xc3191c713b185611!2z44OP44O844OZ44K544Gu5LiY!5e0!3m2!1sja!2sjp!4v1710134567890!5m2!1sja!2sjp" width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.915720743606!2d135.5317452!3d34.4542898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000d680a6e09e13%3A0xc020087799513a8!2z44OP44O844OZ44K544OI44Gu5LiY!5e0!3m2!1sja!2sjp!4v1711166000000!5m2!1sja!2sjp" width="100%" height="300" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 <div class="access-info-box">
                     <h3 style="color: var(--main-green); margin-bottom: 10px; border-bottom: 2px solid var(--accent-gold); display: inline-block; padding-bottom: 5px; font-weight: 700;">わんわんパラダイス</h3>
@@ -283,8 +187,12 @@
 </main>
 
 <footer>© 2026 わんわんパラダイス. All Rights Reserved.</footer>
+
 <a href="contact.html" class="reserve-btn">ご予約</a>
-<a href="#top" class="page-top-btn"><svg viewBox="0 0 24 24"><circle cx="12" cy="14.5" r="4.5"/><circle cx="6" cy="10" r="2.5"/><circle cx="18" cy="10" r="2.5"/><circle cx="9.5" cy="5" r="2.5"/><circle cx="14.5" cy="5" r="2.5"/></svg></a>
+
+<a href="#top" class="page-top-btn">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="14.5" r="4.5"/><circle cx="6" cy="10" r="2.5"/><circle cx="18" cy="10" r="2.5"/><circle cx="9.5" cy="5" r="2.5"/><circle cx="14.5" cy="5" r="2.5"/></svg>
+</a>
 
 <script>
     const observer = new IntersectionObserver((entries) => {
@@ -292,5 +200,6 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
+
 </body>
 </html>
