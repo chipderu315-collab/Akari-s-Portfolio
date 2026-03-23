@@ -3,33 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dog Salon | WanWan Heaven</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Noto+Sans+JP:wght@300;400&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Dog Salon | わんわんパラダイス</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Noto+Sans+JP:wght@300;400&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         /* 変数定義（他ページと完全に統一） */
         :root {
-            --main-green: #4a5d4e;
-            --accent-gold: #c5a059;
+            --main-green: #6b7e5f;
+            --accent-gold: #c2a17a;
             --text-color: #444;
             --line-color: #eee;
             --light-gray: #f8f8f8;
+            --bg-color: #fdfdfc;
         }
 
         body {
             margin: 0; padding: 0;
-            background-color: #fff;
+            background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: 'Shippori Mincho', serif;
+            /* 親しみやすい丸ゴシックへ変更 */
+            font-family: 'Zen Maru Gothic', sans-serif;
             -webkit-font-smoothing: antialiased;
+            line-height: 1.8;
         }
 
-        /* --- 🐾 スマホ専用 details メニュー（共通仕様） --- */
-        .mobile-only-menu {
-            display: none;
-        }
+        /* --- 🐾 スマホ専用 details メニュー --- */
+        .mobile-only-menu { display: none; }
 
-        /* --- ヘッダーデザイン（共通仕様） --- */
+        /* --- ヘッダーデザイン --- */
         .site-header {
             padding: 60px 0 30px;
             background-color: #fff;
@@ -37,11 +37,10 @@
         }
 
         .header-logo {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.4rem;
-            letter-spacing: 0.18em;
+            font-size: 2.2rem;
+            letter-spacing: 0.1em;
             margin-bottom: 60px;
-            font-weight: 300;
+            font-weight: 700;
         }
         .header-logo a { text-decoration: none; color: var(--main-green); }
 
@@ -51,20 +50,19 @@
         }
         .global-nav li a {
             text-decoration: none; color: #666;
-            font-family: 'Cormorant Garamond', serif; font-size: 1.1rem;
-            letter-spacing: 0.12em; transition: 0.3s;
+            font-size: 1.1rem;
+            font-weight: 500;
+            letter-spacing: 0.05em; transition: 0.3s;
             position: relative; padding-bottom: 8px;
         }
         .global-nav li a:hover { color: var(--accent-gold); }
+        .global-nav li a.active { color: var(--accent-gold); font-weight: 700; }
 
-        /* --- モバイル対応（共通仕様） --- */
-        @media (max-width: 768px) {
+        /* --- モバイル対応 --- */
+        @media (max-width: 900px) {
             .global-nav { display: none; }
             .mobile-only-menu {
-                display: block;
-                position: sticky;
-                top: 0;
-                z-index: 1000;
+                display: block; position: sticky; top: 0; z-index: 3000;
             }
             .header-logo { font-size: 1.8rem; margin-bottom: 30px; }
             .site-header { padding: 40px 0 20px; }
@@ -74,78 +72,134 @@
         .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
         
         .page-title-section { text-align: center; margin: 40px 0 60px; }
-        .page-title { font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: var(--main-green); font-weight: 300; margin-bottom: 15px; }
-        .page-subtitle { font-size: 0.9rem; color: #888; letter-spacing: 0.1em; }
+        .page-title { font-size: 2.8rem; color: var(--main-green); font-weight: 700; margin-bottom: 10px; }
+        .page-subtitle { font-size: 1.1rem; color: var(--accent-gold); font-weight: 700; letter-spacing: 0.1em; }
 
-        .hero-wrapper { width: 100%; height: 480px; margin-bottom: 60px; border-radius: 5px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .hero-wrapper { 
+            width: 100%; height: 480px; margin-bottom: 60px; 
+            border-radius: 30px; overflow: hidden; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08); 
+        }
         .hero-image { width: 100%; height: 100%; object-fit: cover; }
         
-        .intro-text { text-align: center; max-width: 700px; margin: 0 auto 80px; line-height: 2.2; font-size: 1rem; color: #555; }
+        .intro-text { text-align: center; max-width: 700px; margin: 0 auto 80px; line-height: 2.2; font-size: 1rem; color: #555; font-weight: 500; }
 
         .section-box { margin-bottom: 100px; }
         .section-box h2 { 
-            font-size: 1.6rem; 
-            border-left: 2px solid var(--accent-gold); 
-            padding-left: 20px; 
+            font-size: 1.8rem; 
+            color: var(--main-green);
+            text-align: center;
             margin-bottom: 40px; 
-            font-weight: 500;
+            font-weight: 700;
+            position: relative;
+        }
+        .section-box h2::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: var(--accent-gold);
+            margin: 15px auto 0;
+            border-radius: 2px;
         }
 
-        .menu-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 1.05rem; }
+        /* メニュー表のカードデザイン */
+        .menu-card {
+            background: #fff;
+            border-radius: 25px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            border: 1px solid var(--line-color);
+        }
+        .menu-table { width: 100%; border-collapse: collapse; font-size: 1.1rem; }
         .menu-table th, .menu-table td { padding: 20px 10px; border-bottom: 1px solid var(--line-color); }
-        .menu-table th { text-align: left; color: var(--main-green); font-weight: 400; }
-        .menu-table td { text-align: right; font-family: 'Cormorant Garamond', serif; color: var(--accent-gold); font-size: 1.2rem; }
+        .menu-table tr:last-child th, .menu-table tr:last-child td { border-bottom: none; }
+        .menu-table th { text-align: left; color: var(--main-green); font-weight: 700; }
+        .menu-table td { text-align: right; color: var(--accent-gold); font-weight: 700; font-size: 1.4rem; }
 
-        .rules-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 20px; }
-        .rule-item { line-height: 2; background: var(--light-gray); padding: 35px; border-radius: 3px; }
-        .rule-item strong { color: var(--main-green); display: block; margin-bottom: 15px; font-size: 1.1rem; }
+        .quality-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
+        .quality-item { 
+            background: #fff; 
+            padding: 35px; 
+            border-radius: 20px; 
+            border: 1px solid var(--line-color);
+            transition: 0.3s;
+        }
+        .quality-item:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .quality-item strong { color: var(--main-green); display: block; margin-bottom: 15px; font-size: 1.2rem; font-weight: 700; }
+        .quality-item p { font-size: 0.95rem; color: #666; font-weight: 500; }
+
+        /* 予約セクション */
+        .reservation-notice {
+            background: #f1f3ef;
+            padding: 60px 40px;
+            border-radius: 30px;
+            text-align: center;
+            margin-top: 80px;
+        }
+        .reservation-notice h3 { color: var(--main-green); font-size: 1.6rem; margin-bottom: 20px; }
+        .btn-reserve {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: #fff;
+            padding: 15px 60px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(194, 161, 122, 0.3);
+        }
+        .btn-reserve:hover {
+            background: var(--main-green);
+            transform: scale(1.05);
+        }
 
         footer { 
             text-align: center; 
-            padding: 100px 0; 
-            color: #aaa; 
-            font-family: 'Cormorant Garamond', serif; 
-            font-size: 0.95rem; 
-            letter-spacing: 0.12em; 
+            padding: 80px 0; 
+            color: #888; 
+            font-weight: 500;
             background: var(--light-gray); 
             margin-top: 120px; 
         }
 
         @media (max-width: 768px) {
-            .hero-wrapper { height: 320px; }
-            .rules-grid { grid-template-columns: 1fr; gap: 20px; }
-            .intro-text { font-size: 0.9rem; padding: 0 10px; }
+            .hero-wrapper { height: 320px; border-radius: 20px; }
+            .quality-grid { grid-template-columns: 1fr; }
+            .menu-card { padding: 20px; }
+            .menu-table th, .menu-table td { font-size: 1rem; }
         }
     </style>
 </head>
 <body>
 
 <details class="mobile-only-menu">
-  <summary style="cursor:pointer; padding:15px; list-style:none; background:var(--main-green); color:white; text-align:center; font-family:'Shippori Mincho', serif; letter-spacing:0.1em;">
+  <summary style="cursor:pointer; padding:15px; list-style:none; background:var(--main-green); color:white; text-align:center; font-weight:700; letter-spacing:0.1em;">
     🐾 MENU
   </summary>
-  <nav style="background:rgba(255,255,255,0.95); padding:25px; border-bottom:1px solid var(--line-color); text-align:center; backdrop-filter:blur(5px);">
+  <nav style="background:rgba(255,255,255,0.98); padding:25px; border-bottom:1px solid var(--line-color); text-align:center; backdrop-filter:blur(5px);">
     <ul style="list-style:none; padding:0; margin:0;">
-      <li style="margin-bottom:20px;"><a href="Dog Run.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem;">Dog Run</a></li>
-      <li style="margin-bottom:20px;"><a href="Dog Cafe.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem;">Dog Cafe</a></li>
-      <li style="margin-bottom:20px;"><a href="Photo Area.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem;">Photo Studio</a></li>
-      <li style="margin-bottom:20px;"><a href="Dog Salon.html" style="text-decoration:none; color:var(--accent-gold); font-size:1.1rem; font-weight:bold;">Dog Salon</a></li>
-      <li><a href="Shop.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem;">Shop</a></li>
-      <li><a href="contact.html"style="text-decoration:none; color:var(--main-green); font-size:1.1rem;">Contact</a></li>
+      <li style="margin-bottom:20px;"><a href="Dog Run.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem; font-weight:700;">Dog Run</a></li>
+      <li style="margin-bottom:20px;"><a href="Dog Cafe.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem; font-weight:700;">Dog Cafe</a></li>
+      <li style="margin-bottom:20px;"><a href="Photo Area.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem; font-weight:700;">Photo Studio</a></li>
+      <li style="margin-bottom:20px;"><a href="Dog Salon.html" style="text-decoration:none; color:var(--accent-gold); font-size:1.1rem; font-weight:700;">Dog Salon</a></li>
+      <li style="margin-bottom:20px;"><a href="Shop.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem; font-weight:700;">Shop</a></li>
+      <li><a href="contact.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem; font-weight:700;">Contact</a></li>
     </ul>
   </nav>
 </details>
 
 <header class="site-header">
     <div class="header-logo">
-        <a href="index.html">WanWan Heaven</a>
+        <a href="index.html">わんわんパラダイス</a>
     </div>
     <nav class="global-nav">
         <ul>
             <li><a href="Dog Run.html">Dog Run</a></li>
             <li><a href="Dog Cafe.html">Dog Cafe</a></li>
             <li><a href="Photo Area.html">Photo Studio</a></li>
-            <li><a href="Dog Salon.html" style="color: var(--accent-gold);">Dog Salon</a></li>
+            <li><a href="Dog Salon.html" class="active">Dog Salon</a></li>
             <li><a href="Shop.html">Shop</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -170,38 +224,40 @@
 
     <div class="section-box">
         <h2>TRIMMING MENU</h2>
-        <table class="menu-table">
-            <tr><th>シャンプーコース</th><td>¥4,000〜</td></tr>
-            <tr><th>シャンプー＆カットコース</th><td>¥6,500〜</td></tr>
-            <tr><th>炭酸泉スパ (オプション)</th><td>+¥1,500</td></tr>
-            <tr><th>肉球ケア・歯磨き</th><td>+¥1,000</td></tr>
-        </table>
-        <p style="margin-top:25px; font-size:0.85rem; color:#888; text-align:right;">※犬種・サイズ・毛玉の状態により料金が異なります。</p>
+        <div class="menu-card">
+            <table class="menu-table">
+                <tr><th>シャンプーコース</th><td>¥4,000〜</td></tr>
+                <tr><th>シャンプー＆カットコース</th><td>¥6,500〜</td></tr>
+                <tr><th>炭酸泉スパ (オプション)</th><td>+¥1,500</td></tr>
+                <tr><th>肉球ケア・歯磨き</th><td>+¥1,000</td></tr>
+            </table>
+            <p style="margin-top:25px; font-size:0.85rem; color:#888; text-align:right;">※犬種・サイズ・毛玉の状態により料金が異なります。</p>
+        </div>
     </div>
 
     <div class="section-box">
         <h2>OUR QUALITY</h2>
-        <div class="rules-grid">
-            <div class="rule-item">
+        <div class="quality-grid">
+            <div class="quality-item">
                 <strong>低刺激へのこだわり</strong>
-                皮膚が弱い子も安心な、厳選された天然由来成分のシャンプーを使用。デリケートな肌を守りながら洗い上げます。
+                <p>皮膚が弱い子も安心な、厳選された天然由来成分のシャンプーを使用。デリケートな肌を守りながら洗い上げます。</p>
             </div>
-            <div class="rule-item">
+            <div class="quality-item">
                 <strong>負担を最小限に</strong>
-                一頭一頭の性格に合わせて、ストレスを与えない丁寧な施術を。休憩を挟みながら、無理のない範囲で進めていきます。
+                <p>一頭一頭の性格に合わせて、ストレスを与えない丁寧な施術を。休憩を挟みながら、無理のない範囲で進めていきます。</p>
             </div>
         </div>
-    </div><section class="reservation-notice">
+    </div>
+
+    <section class="reservation-notice">
         <h3>【完全予約制】ドッグサロン</h3>
-        <p style="line-height: 2;">愛情込めてお手入れします。<br>大切な愛犬がリニューアル！</p>
-        <div style="margin-top: 40px;">
-            <a href="お問い合わせ.html" class="btn-reserve">ご予約</a>
-        </div>
+        <p style="margin-bottom: 30px; font-weight: 500;">愛情込めてお手入れします。<br>大切な愛犬がさらに可愛くリニューアル！</p>
+        <a href="contact.html" class="btn-reserve">ご予約・お問い合わせ</a>
     </section>
 </main>
 
 <footer>
-    &copy; 2026 WanWan Heaven. All Rights Reserved.
+    © 2026 わんわんパラダイス. All Rights Reserved.
 </footer>
 
 </body>

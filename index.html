@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>わんわんHeaven | Forest Dog Resort & Spa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Noto+Sans+JP:wght@300;400&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
+    <title>わんわんパラダイス | 愛犬と過ごすリゾート施設</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Noto+Sans+JP:wght@300;400&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --main-green: #6b7e5f;
@@ -18,7 +18,7 @@
         html { scroll-behavior: smooth; }
         
         body { 
-            font-family: 'Shippori Mincho', serif; 
+            font-family: 'Zen Maru Gothic', sans-serif; 
             background: var(--bg-color); 
             color: var(--text-dark); 
             line-height: 1.8; 
@@ -38,14 +38,14 @@
             padding: 0 5%; background: rgba(253, 252, 252, 0.9); z-index: 1000; 
             backdrop-filter: blur(8px); border-bottom: 1px solid rgba(0,0,0,0.03);
         }
-        .logo a { text-decoration: none; color: var(--main-green); font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; letter-spacing: 0.2em; font-weight: 300; }
+        .logo a { text-decoration: none; color: var(--main-green); font-size: 1.4rem; letter-spacing: 0.1em; font-weight: 700; }
 
         .pc-nav ul { display: flex; list-style: none; gap: 30px; }
         .pc-nav a { 
             text-decoration: none; 
             color: var(--main-green); 
             font-size: 1.0rem; 
-            font-family: 'Cormorant Garamond', serif; 
+            font-weight: 500;
             letter-spacing: 0.1em; 
             transition: 0.3s;
         }
@@ -56,8 +56,8 @@
         /* --- Hero Section --- */
         .hero { min-height: 100vh; display: flex; align-items: center; position: relative; padding: 100px 5% 50px; }
         .hero-content { width: 100%; max-width: 1200px; margin: 0 auto; display: flex; flex-direction: row; align-items: center; justify-content: space-between; }
-        .hero-title { flex: 1; font-family: 'Shippori Mincho', serif; font-size: clamp(2rem, 5vw, 4rem); color: var(--main-green); line-height: 1.4; z-index: 2; font-weight: 500; }
-        .hero-title span { font-size: 1.2rem; color: var(--accent-gold); display: block; font-family: 'Cormorant Garamond', serif; font-style: italic; margin-bottom: 15px; letter-spacing: 0.2em; }
+        .hero-title { flex: 1; font-size: clamp(2rem, 5vw, 4rem); color: var(--main-green); line-height: 1.4; z-index: 2; font-weight: 700; }
+        .hero-title span { font-size: 1.2rem; color: var(--accent-gold); display: block; font-style: italic; margin-bottom: 15px; letter-spacing: 0.2em; }
         .hero-img-wrap { width: 60%; height: 75vh; border-radius: 300px 0 0 300px; overflow: hidden; box-shadow: 20px 20px 60px rgba(0,0,0,0.05); }
         .hero-img { width: 100%; height: 100%; background: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&q=80&w=1600') no-repeat center center/cover; transition: transform 8s ease; }
         .hero:hover .hero-img { transform: scale(1.08); }
@@ -65,15 +65,15 @@
         /* --- Facility Section --- */
         .facility-wrap { padding: 150px 0 100px; }
         .section-intro { text-align: center; margin-bottom: 80px; }
-        .section-intro h2 { font-family: 'Shippori Mincho', serif; font-size: 2.4rem; color: var(--main-green); font-weight: 500; }
+        .section-intro h2 { font-size: 2.2rem; color: var(--main-green); font-weight: 700; }
         .facility-grid { display: grid; grid-template-columns: repeat(3, 1fr); max-width: 1100px; margin: 0 auto; gap: 30px; padding: 0 30px; }
-        .facility-item { text-decoration: none; color: inherit; display: block; text-align: center; background: #fff; border: 1px solid var(--line-color); transition: 0.4s; border-radius: 5px; overflow: hidden; }
+        .facility-item { text-decoration: none; color: inherit; display: block; text-align: center; background: #fff; border: 1px solid var(--line-color); transition: 0.4s; border-radius: 15px; overflow: hidden; }
         .facility-item:hover { transform: translateY(-8px); border-color: var(--accent-gold); }
         .facility-img-box { width: 100%; aspect-ratio: 4 / 3; overflow: hidden; }
         .facility-img-box img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
         .facility-text { padding: 30px 20px; }
-        .facility-text h3 { font-family: 'Shippori Mincho', serif; font-weight: 500; font-size: 1.1rem; color: var(--main-green); }
-        .item-num { font-family: 'Cormorant Garamond', serif; color: var(--accent-gold); display: block; margin-bottom: 15px; font-size: 0.9rem; }
+        .facility-text h3 { font-weight: 700; font-size: 1.2rem; color: var(--main-green); }
+        .item-num { color: var(--accent-gold); display: block; margin-bottom: 10px; font-size: 1rem; font-weight: 700; }
 
         /* --- Resort Map Section --- */
         .map-wrap { padding: 100px 0 150px; background: #f8f8f6; }
@@ -88,7 +88,6 @@
         .map-item { position: absolute; width: 140px; text-align: center; text-decoration: none; color: var(--text-dark); transition: 0.4s; }
         .map-item:hover { transform: scale(1.05); }
         
-        /* 丸のサイズを大きく設定 (120px) */
         .map-icon { 
             width: 120px; height: 120px; 
             margin: 0 auto 10px; background: #fff; 
@@ -100,58 +99,138 @@
         .map-item:hover .map-icon { border-color: var(--accent-gold); box-shadow: 0 15px 30px rgba(194, 161, 122, 0.2); }
         .map-icon img { width: 100%; height: 100%; object-fit: cover; }
         
-        .map-item p { font-size: 0.9rem; font-weight: 600; color: var(--main-green); margin-top: 5px; }
-        .map-item span { font-family: 'Cormorant Garamond', serif; font-size: 0.75rem; color: var(--accent-gold); display: block; }
+        .map-item p { font-size: 0.95rem; font-weight: 700; color: var(--main-green); margin-top: 5px; }
+        .map-item span { font-size: 0.75rem; color: var(--accent-gold); display: block; font-weight: 500; }
 
-        /* 配置：ドッグランを中心に、他をバランスよく配置 */
         .map-center { top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10; }
-        .map-center .map-icon { border: 2px solid var(--accent-gold); } /* 中心だけ少し強調 */
+        .map-center .map-icon { border: 3px solid var(--accent-gold); } 
         
         .pos-salon { top: 5%; left: 15%; } 
         .pos-cafe { top: 5%; right: 15%; }
         .pos-shop { top: 50%; right: 0%; transform: translateY(-50%); }
         .pos-studio { top: 50%; left: 0%; transform: translateY(-50%); }
-        .pos-parking { bottom: 10%; left: 12%; }
-        .pos-contact { bottom: 10%; right: 12%; }
+        
+        /* パーキングとコンタクトの位置を下にずらす（修正箇所） */
+        .pos-parking { bottom: 8%; left: 10%; }
+        .pos-contact { bottom: 8%; right: 10%; }
+        
         .pos-entrance { bottom: -2%; left: 50%; transform: translateX(-50%); }
+
+        /* 画像を小さくする指定 */
+        .pos-parking .map-icon, .pos-contact .map-icon { width: 90px; height: 90px; }
 
         /* --- Access Section --- */
         .access-wrap { padding: 100px 0; background: #fff; border-top: 1px solid var(--line-color); }
+        .access-flex { display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; }
+        .access-map-box { flex: 1.2; min-width: 400px; border: 1px solid var(--line-color); padding: 10px; background: #fff; border-radius: 15px; }
+        .access-info-box { flex: 1; min-width: 300px; }
 
         /* --- Footer & Reserve --- */
-        footer { padding: 80px 0; text-align: center; font-size: 0.8rem; color: #aaa; font-family: 'Cormorant Garamond', serif; letter-spacing: 0.1em; }
-        .reserve-btn { position: fixed; bottom: 30px; right: 30px; width: 110px; height: 110px; background: var(--main-green); color: white; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; z-index: 2000; box-shadow: 0 10px 25px rgba(107, 126, 95, 0.3); transition: 0.4s; font-family: 'Cormorant Garamond', serif; letter-spacing: 0.1em; }
+        footer { padding: 80px 0; text-align: center; font-size: 0.9rem; color: #888; font-weight: 500; letter-spacing: 0.1em; }
+        
+        .reserve-btn { position: fixed; bottom: 30px; right: 30px; width: 110px; height: 110px; background: var(--main-green); color: white; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; z-index: 2000; box-shadow: 0 10px 25px rgba(107, 126, 95, 0.3); transition: 0.4s; font-weight: 700; letter-spacing: 0.1em; }
 
+        .page-top-btn {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background: #fff;
+            border: 2px solid var(--accent-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .page-top-btn svg {
+            fill: var(--accent-gold);
+            width: 32px;
+            height: 32px;
+            transition: 0.3s;
+        }
+
+        .page-top-btn:hover {
+            background: var(--accent-gold);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            opacity: 1;
+        }
+
+        .page-top-btn:hover svg {
+            fill: #fff;
+            transform: scale(1.1);
+        }
+
+        /* --- Responsive Design --- */
         @media (max-width: 900px) {
             header { display: none; }
             .mobile-only-menu { display: block; position: sticky; top: 0; z-index: 3000; }
-            .facility-grid { grid-template-columns: repeat(2, 1fr); }
-            .map-container { transform: scale(0.8); margin-top: -50px; }
-            .map-item { width: 110px; }
-            .map-icon { width: 100px; height: 100px; }
+            
+            .hero-content { flex-direction: column-reverse; padding-top: 20px; }
+            .hero-img-wrap { width: 100%; height: 50vh; border-radius: 0 0 0 150px; margin-bottom: 30px; }
+            .hero-title { font-size: 2.2rem; text-align: center; width: 100%; }
+
+            .facility-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; padding: 0 15px; }
+            
+            /* スマホ時のリゾートマップ調整：重なりを完全に回避するための配置修正 */
+            .map-container { transform: scale(0.9); margin: 0 auto; min-height: 520px; }
+            .map-item { width: 95px; }
+            .map-icon { width: 70px; height: 70px; }
+            
+            .map-center .map-icon { width: 85px; height: 85px; }
+            
+            /* アイコンを外側に逃がしつつ、高さを調整 */
+            .pos-salon { top: 5%; left: 0%; }
+            .pos-cafe { top: 5%; right: 0%; }
+            .pos-shop { top: 48%; right: -8%; }
+            .pos-studio { top: 48%; left: -8%; }
+            
+            /* 下部のParkingとContactをさらに下げて外へ出す */
+            .pos-parking { bottom: 12%; left: -2%; }
+            .pos-contact { bottom: 12%; right: -2%; }
+            
+            .pos-parking .map-icon, .pos-contact .map-icon { width: 60px; height: 60px; }
+
+            .access-flex { flex-direction: column !important; gap: 30px; }
+            .access-map-box, .access-info-box { width: 100% !important; min-width: auto !important; }
+            .access-info-box { text-align: center; }
+            .access-info-box h3::after { content: ""; display: block; width: 60px; height: 2px; background: var(--accent-gold); margin: 10px auto; }
+
+            .page-top-btn { bottom: 20px; left: 20px; width: 50px; height: 50px; }
+            .page-top-btn svg { width: 26px; height: 26px; }
+            .reserve-btn { width: 80px; height: 80px; bottom: 20px; right: 20px; font-size: 0.8rem; }
         }
     </style>
 </head>
 <body>
 
+<div id="top"></div>
+
 <details class="mobile-only-menu">
-  <summary style="cursor:pointer; padding:15px; list-style:none; background:var(--main-green); color:white; text-align:center; font-family:'Shippori Mincho', serif; letter-spacing:0.1em;">
+  <summary style="cursor:pointer; padding:15px; list-style:none; background:var(--main-green); color:white; text-align:center; font-weight:700; letter-spacing:0.1em;">
     🐾 MENU
   </summary>
   <nav style="background:rgba(255,255,255,0.98); padding:25px; border-bottom:1px solid var(--line-color); text-align:center;">
     <ul style="list-style:none; padding:0; margin:0;">
-      <li style="margin-bottom:20px;"><a href="Dog Run.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem;">Dog Run</a></li>
-      <li style="margin-bottom:20px;"><a href="Dog Salon.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem;">Dog Salon</a></li>
-      <li style="margin-bottom:20px;"><a href="Photo Area.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem;">Photo Studio</a></li>
-      <li style="margin-bottom:20px;"><a href="Dog Cafe.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem;">Dog Cafe</a></li>
-      <li style="margin-bottom:20px;"><a href="Shop.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem;">Shop</a></li>
-      <li><a href="contact.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem;">Contact</a></li>
+      <li style="margin-bottom:20px;"><a href="Dog Run.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem; font-weight:700;">Dog Run</a></li>
+      <li style="margin-bottom:20px;"><a href="Dog Salon.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem; font-weight:700;">Dog Salon</a></li>
+      <li style="margin-bottom:20px;"><a href="Photo Area.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem; font-weight:700;">Photo Studio</a></li>
+      <li style="margin-bottom:20px;"><a href="Dog Cafe.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem; font-weight:700;">Dog Cafe</a></li>
+      <li style="margin-bottom:20px;"><a href="Shop.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem; font-weight:700;">Shop</a></li>
+      <li><a href="contact.html" style="text-decoration:none; color:var(--main-green); font-size:1.1rem; font-weight:700;">Contact</a></li>
     </ul>
   </nav>
 </details>
 
 <header>
-    <div class="logo"><a href="index.html">WanWan Heaven</a></div>
+    <div class="logo"><a href="index.html">わんわんパラダイス</a></div>
     <nav class="pc-nav">
         <ul>
             <li><a href="Dog Run.html">Dog Run</a></li>
@@ -165,6 +244,18 @@
 </header>
 
 <main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title fade-in">
+                <span>Welcome to Paradise</span>
+                わんこと、<br>心ゆくまで遊ぶ休日。
+            </h1>
+            <div class="hero-img-wrap fade-in">
+                <div class="hero-img"></div>
+            </div>
+        </div>
+    </section>
+
     <section id="facility" class="facility-wrap">
         <div class="section-intro fade-in"><h2>一瞬一瞬が愛おしい。<br>忘れられない思い出をこの場所で。</h2></div>
         <div class="facility-grid">
@@ -197,8 +288,8 @@
 
     <section class="map-wrap">
         <div class="section-intro fade-in">
-            <h2 style="font-family:'Cormorant Garamond', serif; font-size:1.2rem; color:var(--accent-gold); margin-bottom:10px;">- Resort Map -</h2>
-            <h2>森に広がる、わんわんHeaven</h2>
+            <h2 style="font-size:1.2rem; color:var(--accent-gold); margin-bottom:10px; font-weight:700;">- Resort Map -</h2>
+            <h2>森に広がる、わんわんパラダイス</h2>
         </div>
         
         <div class="map-container fade-in">
@@ -207,7 +298,6 @@
                 <p>Dog Run</p>
                 <span>Grand Park</span>
             </a>
-            
             <a href="Dog Salon.html" class="map-item pos-salon">
                 <div class="map-icon"><img src="image/salon.jpg" alt="Salon"></div>
                 <p>Salon</p>
@@ -242,7 +332,7 @@
                 <div class="map-icon" style="background: var(--main-green); border: none;">
                     <img src="image/gert.png" alt="Entrance" style="filter: brightness(1.5);">
                 </div>
-                <p style="color:var(--accent-gold); font-weight: bold;">Entrance</p>
+                <p style="color:var(--accent-gold); font-weight: 700;">Entrance</p>
                 <span>Welcome Gate</span>
             </a>
         </div>
@@ -250,34 +340,35 @@
 
     <section class="access-wrap fade-in">
         <div class="section-intro">
-            <h2 style="font-family:'Cormorant Garamond', serif; font-size:1.2rem; color:var(--accent-gold); margin-bottom:10px;">- Access -</h2>
+            <h2 style="font-size:1.2rem; color:var(--accent-gold); margin-bottom:10px; font-weight:700;">- Access -</h2>
             <h2>アクセス</h2>
         </div>
 
         <div class="container" style="max-width: 1000px; margin: 0 auto; padding: 0 20px;">
-            <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
-                <div style="flex: 1; min-width: 300px; border: 1px solid var(--line-color); padding: 10px; background: #fdfdfc;">
+            <div class="access-flex">
+                <div class="access-map-box">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.7562086204564!2d135.50346377644917!3d34.48373309485741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000d98410712f51%3A0xc6c42171c6670566!2z5aC65biC5Y-O5pyf5YWs5ZySIOODjOODvOODmeOCueODiOOBruS4mA!5e0!3m2!1sja!2sjp!4v1710000000000!5m2!1sja!2sjp" 
+                        src="http://googleusercontent.com/maps.google.com/6" 
                         width="100%" 
                         height="350" 
-                        style="border:0; filter: grayscale(0.2);" 
+                        style="border:0; filter: grayscale(0.2); border-radius: 10px;" 
                         allowfullscreen="" 
                         loading="lazy">
                     </iframe>
                 </div>
-                <div style="flex: 1; min-width: 300px;">
+                <div class="access-info-box">
                     <div style="margin-bottom: 30px;">
-                        <h3 style="font-family: 'Shippori Mincho', serif; color: var(--main-green); font-size: 1.3rem; margin-bottom: 15px; border-bottom: 1px solid var(--accent-gold); display: inline-block; padding-bottom: 5px;">
-                            WanWan Heaven
+                        <h3 style="color: var(--main-green); font-size: 1.4rem; margin-bottom: 15px; border-bottom: 2px solid var(--accent-gold); display: inline-block; padding-bottom: 5px; font-weight: 700;">
+                            わんわんパラダイス
                         </h3>
-                        <p style="font-size: 1rem; color: #555; line-height: 2;">
+                        <p style="font-size: 1rem; color: #555; line-height: 2; font-weight: 500;">
+                            愛犬と過ごすリゾート施設<br>
                             〒590-0125<br>
                             大阪府堺市南区鉢ヶ峯寺2405-1<br>
-                            （堺・緑のミュージアム ハーベストの丘 隣接）
+                            <span style="font-size: 0.9rem; color: #888;">（ハーベストの丘 隣接）</span>
                         </p>
                     </div>
-                    <div style="font-size: 0.9rem; color: #777;">
+                    <div style="font-size: 0.95rem; color: #777;">
                         <p style="margin-bottom: 10px;">
                             <strong style="color: var(--main-green);">[ お車でお越しの方 ]</strong><br>
                             阪和自動車道「堺IC」より約15分
@@ -293,8 +384,15 @@
     </section>
 </main>
 
-<footer>© 2026 WanWan Heaven. All Rights Reserved.</footer>
+<footer>© 2026 わんわんパラダイス. All Rights Reserved.</footer>
+
 <a href="contact.html" class="reserve-btn">ご予約</a>
+
+<a href="#top" class="page-top-btn">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="14.5" r="4.5"/><circle cx="6" cy="10" r="2.5"/><circle cx="18" cy="10" r="2.5"/><circle cx="9.5" cy="5" r="2.5"/><circle cx="14.5" cy="5" r="2.5"/>
+    </svg>
+</a>
 
 <script>
     const observer = new IntersectionObserver((entries) => {
